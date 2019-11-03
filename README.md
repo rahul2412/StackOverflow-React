@@ -1,5 +1,8 @@
 # StackOverflow-React
 
+## Technologies used
+- ReactJS , NodeJS, ExpressJS, React-Bootstrap
+
 ## How to run-
 
 1. Open back_node folder after extracting the zipped file.
