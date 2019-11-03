@@ -1,7 +1,7 @@
 # StackOverflow-React
 
 ## Technologies used
-- ReactJS , NodeJS, ExpressJS, React-Bootstrap
+- ReactJS , NodeJS, ExpressJS, React-Bootstrap(a UI library for React). 
 
 ## How to run-
 
