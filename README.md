@@ -12,7 +12,7 @@
 
 ## Demo of the app-
 Login page-
-<img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/login.PNG" alt="Demo of application">
+<img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/login.PNG" alt="Demo of application"/>
 Home page-
-<img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/home.PNG" alt="Demo of application">
+<img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/home.PNG" alt="Demo of application"/>
 
