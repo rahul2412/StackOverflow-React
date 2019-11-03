@@ -11,5 +11,5 @@
 7. Sample images of project are inside the project_images folder.
 
 ## Demo of the app-
-<img src="https://github.com/rahul2412/React-CRUD/blob/master/project_images/login.PNG" alt="Demo of application">
-<img src="https://github.com/rahul2412/React-CRUD/blob/master/project_images/home.PNG" alt="Demo of application">
+<img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/login.PNG" alt="Demo of application">
+<img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/home.PNG" alt="Demo of application">
