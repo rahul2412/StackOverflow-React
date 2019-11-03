@@ -9,3 +9,7 @@
 5. Type npm install in second command prompt. Then, npm start to deploy the react app (front-end of the application). 
 6. Application will run on http://localhost:3000.
 7. Sample images of project are inside the project_images folder.
+
+## Demo of the app-
+<img src="https://github.com/rahul2412/React-CRUD/blob/master/project_images/login.PNG" alt="Demo of application">
+<img src="https://github.com/rahul2412/React-CRUD/blob/master/project_images/home.PNG" alt="Demo of application">
