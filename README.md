@@ -16,9 +16,10 @@
 - Dummy usernames are- samir101, ravi12, rahull6, raghav002, vidhu325
 
 ## Demo of the app-
-Login page-
+Login page:
+
 <img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/login.PNG" alt="Demo of application"/>
 
-Home page-
+Home page:
 <img src="https://github.com/rahul2412/StackOverflow-React/blob/master/project_images/home.PNG" alt="Demo of application"/>
 
