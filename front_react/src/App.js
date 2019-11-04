@@ -4,31 +4,43 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 class App extends React.Component
- { constructor(props){ 
+
+ { 
+   constructor(props){ 
   
   super(props);
   this.state={
-    loggedIn: "yes"
-  }
+    loggedIn: "yes"}
+    
   this.submitIt = this.submitIt.bind(this);
  }
 
         
        async submitIt(e){
-            //e.preventDefault();
-             this.setState({loggedIn:"no"});
-            fetch('/api/post_status', {
+            //e.preventDefault();  // Uncomment it  and change fetch url to check exceptional handling
+
+             this.setState({loggedIn:"no"}); // would not matter when the state is set as "no" is passed in fetch below
+
+            const response=await fetch('/api/post_status', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ loggedIn: this.state.loggedIn }),
+              body: JSON.stringify({ loggedIn: "no" }), // "no" must be passed whenever we logout
             
             });
-          
 
-            
+            //Error handling
+            try{
+            if (response.status !== 200)
+            throw Error("There is an Error with Error code "+response.status);}
+
+            catch(e){
+            console.log(e); // Any other custom behavior can be set
+            }
+          
         } 
+
 
    render(){
   return (
