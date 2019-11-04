@@ -4,14 +4,17 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Child from './Child.js';
 
+
+// Parent component 'Child.js'
 class Data extends React.Component {
 
   constructor(props){ 
   
   super(props);
   
-  this.state={ question_new:"", user:"",
+  this.state={ question_new:"", user:"", ad:"", temp_id:"",
   data: [{id:"samir101", question: "what are advantages of react?",answers:[]},
   {id:"ravi12", question: "what is server?",answers:[]},
   {id:"rahull6", question: "when was Ruby on rails invernted?",answers:[]},
@@ -20,11 +23,11 @@ class Data extends React.Component {
   
 ]};
   
+// all bindings
   this.removeIt = this.removeIt.bind(this);
   this.updateIt = this.updateIt.bind(this);
   this.createIt = this.createIt.bind(this);
-  this.answerIt = this.answerIt.bind(this);
-  
+  this.postAnswer = this.postAnswer.bind(this);
   this.handleChangequestion = this.handleChangequestion.bind(this);
   
   }
@@ -91,6 +94,7 @@ alert("You don't have permission as you are not the owner of it")
   //console.log(this.state.data);
   alert("Editing question... ");
 }
+
 else
 alert ("You don't have permission as you did not create this question.")
   
@@ -122,28 +126,21 @@ alert ("You don't have permission as you did not create this question.")
   
   data: prevState.data.concat(new_item)
   
-  };
+       };
   
-  });
+      });
   
 
   alert(" Question posted at the bottom...");
-    console.log(this.state.data);
+    //console.log(this.state.data);
     this.setState({id_new:"", name_new:"", question_new:""});
-
-
-
-  }
+    }
 }
 
-
-// Posting answers
-async answerIt(id){
-
-//console.log(id+" clicked");
- const ans= prompt("Type your answer?");
-
-let j=-1;
+async postAnswer(ans,id) //posting answer
+{
+  //console.log(ans+" "+id);
+  let j=-1;
   for (let i=0;i<this.state.data.length;i++)
   {
     if(this.state.data[i].id===id)
@@ -156,14 +153,9 @@ let j=-1;
   old_data[j].answers=ans_new;
   
   this.setState({data: old_data});
-
-  
- console.log(this.state.data);
+  // console.log(this.state.data);
 
 }
-  
- 
-  
   
   handleChangequestion(e){
   
@@ -200,9 +192,8 @@ let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
   <div><ul style= {{listStyleType: "none"}}>
   <Container>
   <Row>
-    <Col style={{fontWeight: "bold"}} md={1}>Id</Col>
-    <Col style={{fontWeight: "bold"}} md={5}>question</Col>
-    <Col style={{fontWeight: "bold"}} md={2}>Action</Col>
+    <Col style={{fontWeight: "bold"}} md={2}>Id</Col>
+    <Col style={{fontWeight: "bold"}} md={4}>question</Col>
     <Col style={{fontWeight: "bold"}} md={2}>Action</Col>
     <Col style={{fontWeight: "bold"}} md={2}>Action</Col>
   </Row>
@@ -219,13 +210,13 @@ let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
   
   <Container>
   <Row>
-    <Col md={1}>{item.id}</Col>
-    <Col md={5}>{item.question}</Col>
+    <Col md={2}>{item.id}</Col>
+    <Col md={4}>{item.question}</Col>
     <Col md={2}><Button variant="primary" onClick={() => {this.updateIt(item.id)}}>Update</Button></Col>
-    <Col md={2}><Button variant="secondary" onClick={() => this.answerIt(item.id) }>Answer</Button></Col>
     <Col md={2}><Button variant="danger" onClick={() => {this.removeIt(item.id,item.question) }}>Delete</Button></Col>
    
   </Row>
+  <Col md={8}><Child action={this.postAnswer} id={item.id} /></Col>
   
   <Row>
    <div>
@@ -260,4 +251,3 @@ let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 }
 
 export default Data;
-

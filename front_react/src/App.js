@@ -48,11 +48,10 @@ class App extends React.Component
      
    <h1 style={{fontFamily:"Serif",fontStyle:"italic",fontSize:"48px",textAlign:"center"}}> My Stack</h1>
    
-   
    <form style={{textAlign:"center",padding:"2%"}} onSubmit={this.submitIt}>
-   
    <Button style={{marginRight:"40px", float:"right"}} variant="success" type="submit">Logout</Button><br/>
    </form>
+
    <hr style={{border:"1px solid black"}}/>
    
    <Data/>
