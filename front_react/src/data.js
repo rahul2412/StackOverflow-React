@@ -137,7 +137,7 @@ alert ("You don't have permission as you did not create this question.")
     }
 }
 
-async postAnswer(ans,id) //posting answer
+async postAnswer(ans,id) //posting answer, data coming from Child component
 {
   //console.log(ans+" "+id);
   let j=-1;
