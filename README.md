@@ -1,4 +1,5 @@
 # StackOverflow-React
+A simple copy of Stack overflow is built in ReactJS.
 
 ## Technologies used
 - ReactJS , NodeJS, ExpressJS, React-Bootstrap (a UI library for React). 
